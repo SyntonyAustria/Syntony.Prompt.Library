@@ -191,9 +191,15 @@ public void GeneratedKeys_AreUnique_AndSecure()
 - Automate SBOM (Software Bill of Materials) generation.  
 - Enable security event correlation with Diagnostics prompt.  
 - Extend to container hardening (AppArmor, seccomp).  
-
 ---
 
-© 2025 Josef Hahnl — Syntony Austria  
-**Sys.Kernel Security & Safe Defaults Prompt v3.1**  
-Defensive | Immutable | Predictable | Analyzer-Clean
+## 📜 License - Copyright
+
+© 2025 Josef Hahnl — *Syntony Austria*  
+All rights reserved.  
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
+
+***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
+
+---

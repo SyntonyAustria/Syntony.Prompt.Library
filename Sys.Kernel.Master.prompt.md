@@ -195,6 +195,13 @@ Artifacts stored under `/artifacts/syskernel-analysis.json`.
 
 ---
 
-© 2025 Josef Hahnl — Syntony Austria  
-**Sys.Kernel Master Prompt v4.0**  
-Clarity | Strength | Dignity | Precision | Performance
+## 📜 License - Copyright
+
+© 2025 Josef Hahnl — *Syntony Austria*  
+All rights reserved.  
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
+
+***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
+
+---

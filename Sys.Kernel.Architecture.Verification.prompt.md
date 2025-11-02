@@ -285,6 +285,13 @@ The Null Object Pattern is now an **architectural invariant** of Sys.Kernel:
 
 ---
 
-© 2025 Josef Hahnl — Syntony Austria
-**Sys.Kernel Architecture Verification Prompt v3.2**
-Disciplined | Layered | Deterministic | Analyzer-Clean
+## 📜 License - Copyright
+
+© 2025 Josef Hahnl — *Syntony Austria*  
+All rights reserved.  
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
+
+***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
+
+---

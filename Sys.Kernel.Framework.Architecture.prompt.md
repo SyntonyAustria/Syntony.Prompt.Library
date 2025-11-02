@@ -178,6 +178,13 @@ All test fixtures must conform to these unified standards:
 
 ---
 
-© 2025 Josef Hahnl — Syntony Austria  
-**Königsweg Level 3.1 Prompt** — Unified, Analyzer-Clean, .editorconfig-Compliant Framework Excellence  
-High-Performance | Test-Validated | Architecturally Sound
+## 📜 License - Copyright
+
+© 2025 Josef Hahnl — *Syntony Austria*  
+All rights reserved.  
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
+
+***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
+
+---

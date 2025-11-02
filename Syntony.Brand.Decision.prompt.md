@@ -8,7 +8,7 @@ description: "Final brand identity decision defining the relationship between Sy
 ---
 
 # 🌐 Syntony & Homo Syntonicus
-## Man in harmony — The system in harmony
+## Man in harmony — System in harmony
 
 ---
 
@@ -91,7 +91,7 @@ Together, these three form the **Königsweg** — the royal path of creation:
 | **Color Scheme** | Royal blue & gold | Ivory & midnight blue |
 | **Shape Language** | Geometric, modular | Organic, circular |
 | **Typography** | Space Grotesk / Inter | Playfair Display / Serif Classic |
-| **Tagline** | *Das System im Einklang* | *Der Mensch im Einklang* |
+| **Tagline** | System in harmony | Man & mankind in harmony |
 
 > **Syntony** schafft Struktur.
 > **Homo Syntonicus** gibt ihr Sinn.
@@ -116,16 +116,17 @@ Together, these three form the **Königsweg** — the royal path of creation:
 > **Homo Syntonicus** is the name of the being — the resonance of life.
 >
 > Together, they form the architecture of the new human-technical age:
-> **Der Mensch und das System im Einklang.**
+> **Man & System in harmony.**
 
 ---
 
-[J.P.Hahnl on github](https://github.com/JPHahnl)
+## 📜 License - Copyright
 
-[Syntony on github](https://github.com/SyntonyAustria)
+© 2025 Josef Hahnl — *Syntony Austria*  
+All rights reserved.  
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
+
+***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
 
 ---
-
-© 2025 Josef Hahnl — *Syntony Austria*
-All rights reserved.
-*Klarheit. Stärke. Würde. Im Einklang.*

@@ -127,6 +127,13 @@ All prompts operate under the same analyzer suite and style policy:
 
 ---
 
-© 2025 Josef Hahnl — Syntony Austria
-**Sys.Kernel Prompt-Library Index v1.0**
-Unified | Analyzer-Clean | Deterministic | Built for C# 13 / .NET 9
+## 📜 License - Copyright
+
+© 2025 Josef Hahnl — *Syntony Austria*  
+All rights reserved.  
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
+
+***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
+
+---

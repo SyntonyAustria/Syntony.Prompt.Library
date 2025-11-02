@@ -119,5 +119,14 @@ When generating `.prompt.md` files:
 
 ---
 
+## 📜 License - Copyright
+
 © 2025 Josef Hahnl — *Syntony Austria*  
-*Framework of Resonance | Prompt Architecture for the Königsweg Age*
+All rights reserved.  
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
+
+***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
+
+---
+

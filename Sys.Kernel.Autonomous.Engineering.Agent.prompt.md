@@ -192,6 +192,13 @@ Upon finishing:
 
 ---
 
-© 2025 Josef Hahnl — Syntony Austria  
-**Beast Mode 3.1** — Autonomous Engineering Excellence  
-Persistence | Precision | Performance | Perfection
+## 📜 License - Copyright
+
+© 2025 Josef Hahnl — *Syntony Austria*  
+All rights reserved.  
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
+
+***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
+
+---
