@@ -1,15 +1,15 @@
 <!--- ***************************************************************************************************************************************************************** --->
 <!--- <copyright file="README.md" company="J.P.Hahnl"> --->
-<!---     Copyright © 2017 - 2025 by J.P.Hahnl® / Ing. Josef Hahnl, MBA - j.p.hahnl@outlook.com - All rights reserved. --->
+<!---     Copyright © 2017 - 2025 by Josef Hahnl — Syntony Austria — All rights reserved. --->
 <!--- </copyright> --->
 <!--- <author>Hahnl - hahnl</author> --->
-<!--- <email>j.p.hahnl@outlook.com</email> --->
-<!--- <date>02.11.2025 11:31:52</date> --->
+<!--- <email>SyntonyAustria@outlook.com</email> --->
+<!--- <date>02.11.2025 11:41:10</date> --->
 <!--- <information solution="Syntony.Prompt.Library" project="Miscellaneous Files" framework="<unknown>" kind="{66A2671D-8FB5-11D2-AA7E-00C04F688DDE}is unknown"> --->
-<!---     <file type=".md" created="02.11.2025 09:44:04" modified="02.11.2025 11:31:52" lastAccess="02.11.2025 11:31:52"> --->
+<!---     <file type=".md" created="02.11.2025 09:44:04" modified="02.11.2025 11:41:10" lastAccess="02.11.2025 11:41:10"> --->
 <!---         D:\Syntony\CommonProperties\Prompts\README.md --->
 <!---     </file> --->
-<!---     <lineStatistics total="177" contentLines="129" blankLines ="48" codeLines="129" codeRatio="72.88 %" allCommentLines="15" commentLines="15" headerLines="15"/> --->
+<!---     <lineStatistics total="179" contentLines="128" blankLines ="51" codeLines="128" codeRatio="71.51 %" allCommentLines="15" commentLines="15" headerLines="15"/> --->
 <!---     <language>MARKDOWN</language> --->
 <!--- </information> --->
 <!--- ***************************************************************************************************************************************************************** --->
@@ -19,6 +19,7 @@
 *Built with Clarity · Strength · Dignity*
 
 ---
+
 ![Syntony Framework — Clarity · Strength · Dignity](./Assets/Syntony.png)
 
 ---
@@ -167,9 +168,10 @@ bridging AI semantics and human clarity.
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*
-All rights reserved.
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***

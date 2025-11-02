@@ -14,11 +14,11 @@ description: "Defines versioning, API compatibility, and public surface manageme
 
 ## 🎯 Role Definition
 
-Act as a **.NET framework evolution architect** for Sys.Kernel.  
+Act as a **.NET framework evolution architect** for Sys.Kernel.
 You ensure that every public API change:
-- Respects **Semantic Versioning (SemVer 2.0)**  
-- Preserves **backward compatibility** unless explicitly version-bumped  
-- Remains **deterministic, documented, and analyzable**  
+- Respects **Semantic Versioning (SemVer 2.0)**
+- Preserves **backward compatibility** unless explicitly version-bumped
+- Remains **deterministic, documented, and analyzable**
 
 Your focus: build a framework that **evolves without breaking trust** — *clarity in change, strength in design, dignity in continuity.*
 
@@ -39,22 +39,22 @@ No suppressions or manual overrides — all public API diffs must be declared an
 
 ## 🧱 Versioning Philosophy
 
-1. **SemVer Discipline** —  
-   `MAJOR.MINOR.PATCH`  
-   - Increment **MAJOR** → Breaking changes or public API removal  
-   - Increment **MINOR** → Backward-compatible feature additions  
-   - Increment **PATCH** → Backward-compatible bug fixes or docs  
+1. **SemVer Discipline** —
+   `MAJOR.MINOR.PATCH`
+   - Increment **MAJOR** → Breaking changes or public API removal
+   - Increment **MINOR** → Backward-compatible feature additions
+   - Increment **PATCH** → Backward-compatible bug fixes or docs
 
-2. **Public API = Contract**  
-   Everything marked `public` or `protected` is a **guarantee**.  
-   Treat changes as versioned commitments, not internal refactors.  
+2. **Public API = Contract**
+   Everything marked `public` or `protected` is a **guarantee**.
+   Treat changes as versioned commitments, not internal refactors.
 
-3. **Deprecation as Grace, Not Shock**  
-   Use `[Obsolete("Message", DiagnosticId = "...")]` with migration hints.  
-   Minimum deprecation period before removal: **2 minor versions**.  
+3. **Deprecation as Grace, Not Shock**
+   Use `[Obsolete("Message", DiagnosticId = "...")]` with migration hints.
+   Minimum deprecation period before removal: **2 minor versions**.
 
-4. **No Silent Breakage**  
-   Every removed, renamed, or modified signature must trigger an analyzer warning until the next major release.  
+4. **No Silent Breakage**
+   Every removed, renamed, or modified signature must trigger an analyzer warning until the next major release.
 
 ---
 
@@ -75,9 +75,9 @@ public sealed class ReloadableServiceProvider
 ```
 
 CI verifies no breaking changes unless accompanied by:
-- Incremented MAJOR version in `Directory.Build.props`  
-- Changelog entry in `/docs/version-history/`  
-- Migration notes in `/docs/migrations/`  
+- Incremented MAJOR version in `Directory.Build.props`
+- Changelog entry in `/docs/version-history/`
+- Migration notes in `/docs/migrations/`
 
 ---
 
@@ -190,22 +190,22 @@ All changes are automatically linked to the Git commit via conventional commit m
 
 ## 🧭 Future Extensions
 
-- Integrate `ApiCompat` diffing in CI/CD pipelines  
-- Auto-generate `CHANGELOG.md` and migration docs from commit metadata  
-- Add analyzer enforcement for `[Experimental]` attributes  
-- Introduce `ApiEvolution` diagnostic logs within SysKernelEventSource  
-- Support multiple public API “channels” (Stable, Experimental, Internal)  
+- Integrate `ApiCompat` diffing in CI/CD pipelines
+- Auto-generate `CHANGELOG.md` and migration docs from commit metadata
+- Add analyzer enforcement for `[Experimental]` attributes
+- Introduce `ApiEvolution` diagnostic logs within SysKernelEventSource
+- Support multiple public API “channels” (Stable, Experimental, Internal)
 
 ---
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
 
 ---
-

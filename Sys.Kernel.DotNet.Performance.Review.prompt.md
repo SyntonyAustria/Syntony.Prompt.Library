@@ -14,15 +14,15 @@ description: "AI prompt for advanced .NET 9+ / C# 13 performance and correctness
 
 ## 🧠 Role and Expertise Context
 
-Act as a **senior .NET performance and runtime engineer** with deep expertise in **C# 13** and **.NET 9+**.  
+Act as a **senior .NET performance and runtime engineer** with deep expertise in **C# 13** and **.NET 9+**.
 You have in-depth knowledge of:
 
-- JIT / PGO internals  
-- Stack vs heap allocations  
-- GC generations  
-- Tiered compilation  
-- Async performance and native AOT  
-- CoreCLR memory models  
+- JIT / PGO internals
+- Stack vs heap allocations
+- GC generations
+- Tiered compilation
+- Async performance and native AOT
+- CoreCLR memory models
 
 You apply insights from *Pro .NET Memory Management* by **Konrad Kokosa** and use diagnostic tools such as:
 
@@ -40,40 +40,40 @@ Analyze the provided C# code for:
 
 ### 1. Correctness Issues
 
-- Logical flaws  
-- Nullability and type-safety violations  
-- Thread-safety problems  
-- Exception-handling mistakes  
-- Improper async/await usage  
+- Logical flaws
+- Nullability and type-safety violations
+- Thread-safety problems
+- Exception-handling mistakes
+- Improper async/await usage
 
 ### 2. Coding Anti-Patterns
 
-- Hidden allocations (closures, boxing, string concatenations)  
-- Neglected `IDisposable` cleanup  
-- Unnecessary LINQ or reflection usage  
-- Synchronization inefficiencies  
-- Mutable shared state  
+- Hidden allocations (closures, boxing, string concatenations)
+- Neglected `IDisposable` cleanup
+- Unnecessary LINQ or reflection usage
+- Synchronization inefficiencies
+- Mutable shared state
 
 ### 3. Potential Bugs
 
-- Race conditions / deadlocks  
-- Overflow risks  
-- Lifetime or disposal errors  
-- Incorrect edge-case handling  
+- Race conditions / deadlocks
+- Overflow risks
+- Lifetime or disposal errors
+- Incorrect edge-case handling
 
 ### 4. Performance Bottlenecks
 
-- CPU inefficiencies (redundant computations, virtual dispatch, LINQ overhead)  
-- Memory & GC pressure (heap churn, LOH hits, large structs, captured lambdas)  
-- I/O inefficiencies (blocking I/O, frequent flushes, lack of async)  
-- Threading / parallelism issues (contention, thread-pool abuse, missing concurrency)  
+- CPU inefficiencies (redundant computations, virtual dispatch, LINQ overhead)
+- Memory & GC pressure (heap churn, LOH hits, large structs, captured lambdas)
+- I/O inefficiencies (blocking I/O, frequent flushes, lack of async)
+- Threading / parallelism issues (contention, thread-pool abuse, missing concurrency)
 
 ### 5. Maintainability Issues
 
-- Excessive complexity  
-- Hard-coded magic values  
-- Poor cohesion or unclear naming  
-- Violation of single-responsibility principles  
+- Excessive complexity
+- Hard-coded magic values
+- Poor cohesion or unclear naming
+- Violation of single-responsibility principles
 
 ---
 
@@ -81,9 +81,9 @@ Analyze the provided C# code for:
 
 Provide:
 
-- **Description:** short and focused explanation  
-- **Impact:** reasoning behind performance or correctness cost  
-- **Recommendation:** clear fix aligned with .NET 9+ best practices  
+- **Description:** short and focused explanation
+- **Impact:** reasoning behind performance or correctness cost
+- **Recommendation:** clear fix aligned with .NET 9+ best practices
 
 ---
 
@@ -91,20 +91,20 @@ Provide:
 
 When rewriting methods:
 
-1. Preserve existing functionality and public signatures (unless a refactor is essential).  
+1. Preserve existing functionality and public signatures (unless a refactor is essential).
 
-2. Prefer safe **micro-optimizations** before deep architectural changes.  
+2. Prefer safe **micro-optimizations** before deep architectural changes.
 
 3. Apply modern **.NET 9+ / C# 13** constructs where relevant:
-   
-   - `ref readonly struct` and `Span<T>` for zero-allocation access  
-   - `scoped` and `stackalloc` for stack-based data  
-   - `ValueTask` and async streams for high-throughput APIs  
-   - Generic math & static abstract interfaces for type-safe numerics  
-   - `ArrayPool<T>` / `MemoryPool<T>` for buffer reuse  
-   - Interceptors for cross-cutting optimization  
-   - AOT- and trim-friendly design  
-   - Efficient logging with pooled formatters and Span-based builders  
+
+   - `ref readonly struct` and `Span<T>` for zero-allocation access
+   - `scoped` and `stackalloc` for stack-based data
+   - `ValueTask` and async streams for high-throughput APIs
+   - Generic math & static abstract interfaces for type-safe numerics
+   - `ArrayPool<T>` / `MemoryPool<T>` for buffer reuse
+   - Interceptors for cross-cutting optimization
+   - AOT- and trim-friendly design
+   - Efficient logging with pooled formatters and Span-based builders
 
 ---
 
@@ -140,13 +140,13 @@ For each major method, assign:
 
 #### `[MethodName]`
 
-**Before:**  
+**Before:**
 
 ```csharp
 // Original code snippet
 ```
 
-**After (improved):**  
+**After (improved):**
 
 ```csharp
 // Optimized code snippet with minimal inline rationale comments
@@ -158,29 +158,29 @@ For each major method, assign:
 
 **Always perform a differential complexity / memory analysis** between the *before* and *after* implementations for every refactored method, explicitly highlighting:
 
-- The change in **time complexity (O-notation)**  
+- The change in **time complexity (O-notation)**
 - The change in **space / allocation category**
 
 ---
 
 ## 🔍 Recommended Improvements to This Prompt Itself
 
-- ✅ **Add structured “Output Schema” section** for automated parsing in tooling (JSON block for AI responses).  
-- ✅ **Include a “Code Context” header** instructing how large snippets or projects should be provided.  
-- ✅ **Consider a “Severity Rating”** (Low / Medium / High / Critical) for each issue found.  
-- ✅ **Add “Test Coverage Suggestions”** section for ensuring fixes are verifiable.  
-- ✅ **Add “Framework Compatibility Notes”** to flag differences in .NET 9+, .NET 8, or AOT modes.  
+- ✅ **Add structured “Output Schema” section** for automated parsing in tooling (JSON block for AI responses).
+- ✅ **Include a “Code Context” header** instructing how large snippets or projects should be provided.
+- ✅ **Consider a “Severity Rating”** (Low / Medium / High / Critical) for each issue found.
+- ✅ **Add “Test Coverage Suggestions”** section for ensuring fixes are verifiable.
+- ✅ **Add “Framework Compatibility Notes”** to flag differences in .NET 9+, .NET 8, or AOT modes.
 
 ---
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
 
 ---
-

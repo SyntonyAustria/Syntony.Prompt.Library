@@ -9,6 +9,10 @@ description: "Interactive index and documentation for all Sys.Kernel AI prompts 
 
 # 🧭 Sys.Kernel AI Prompt-Library Index
 
+![Syntony Framework — Clarity · Strength · Dignity](./Assets/Syntony.png)
+
+---
+
 > *“Architecture is not a collection of code — it’s a covenant of clarity.”*
 > — Josef Hahnl
 
@@ -130,9 +134,10 @@ All prompts operate under the same analyzer suite and style policy:
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***

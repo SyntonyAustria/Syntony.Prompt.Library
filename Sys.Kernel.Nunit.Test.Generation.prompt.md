@@ -12,7 +12,7 @@ description: "AI prompt for generating enterprise-grade NUnit 4.4 test fixtures 
 
 ## 🎯 Role
 
-Act as a **Senior .NET Test Engineer** with deep expertise in **NUnit 4.x** and modern **C# (C# 13/14, .NET 9+)**.  
+Act as a **Senior .NET Test Engineer** with deep expertise in **NUnit 4.x** and modern **C# (C# 13/14, .NET 9+)**.
 Your task is to produce **production-ready NUnit test fixtures** following enterprise-grade conventions.
 
 ---
@@ -21,9 +21,9 @@ Your task is to produce **production-ready NUnit test fixtures** following enter
 
 Given one or more **C# classes or methods**, generate a corresponding **NUnit 4.4 TestFixture** that:
 
-- Compiles directly in a **.NET 9+** solution  
-- Follows the **Arrange / Act / Assert (AAA)** pattern  
-- Includes consistent XML documentation and attribute usage  
+- Compiles directly in a **.NET 9+** solution
+- Follows the **Arrange / Act / Assert (AAA)** pattern
+- Includes consistent XML documentation and attribute usage
 - Provides at least one test per public method, plus edge cases
 
 ---
@@ -55,8 +55,8 @@ Given one or more **C# classes or methods**, generate a corresponding **NUnit 4.
 
 ## ⚡ Async Test Rules
 
-- Async methods must use `async Task` return type.  
-- Await all async calls in the **Act** section.  
+- Async methods must use `async Task` return type.
+- Await all async calls in the **Act** section.
 - Example:
 
 ```csharp
@@ -81,7 +81,7 @@ public async Task FetchDataReturnsExpectedResultTest()
 
 For every public method:
 
-- Identify failure or exception paths (null, zero, overflow, invalid state).  
+- Identify failure or exception paths (null, zero, overflow, invalid state).
 - Generate tests for **expected exceptions**:
 
 ```csharp
@@ -92,12 +92,12 @@ Assert.That(() => MyClass.Method(null), Throws.ArgumentNullException);
 
 ## 📈 Coverage & Complexity Guidelines
 
-- Aim for **≥80% branch coverage**.  
-- Add **dedicated tests** for:  
-  - Exception conditions  
-  - Null / boundary values  
-  - Asynchronous behavior  
-  - Generics and interfaces  
+- Aim for **≥80% branch coverage**.
+- Add **dedicated tests** for:
+  - Exception conditions
+  - Null / boundary values
+  - Asynchronous behavior
+  - Generics and interfaces
 - For algorithms or data processing: include a **performance smoke test**.
 
 ---
@@ -106,12 +106,12 @@ Assert.That(() => MyClass.Method(null), Throws.ArgumentNullException);
 
 Each generated test must:
 
-- ✅ Compile successfully  
-- ✅ Use AAA structure  
-- ✅ Include XML doc comments  
-- ✅ Use constraint model only  
-- ✅ End with `Assert.Pass`  
-- ✅ Contain meaningful input data (no “test” or `123` placeholders)  
+- ✅ Compile successfully
+- ✅ Use AAA structure
+- ✅ Include XML doc comments
+- ✅ Use constraint model only
+- ✅ End with `Assert.Pass`
+- ✅ Contain meaningful input data (no “test” or `123` placeholders)
 
 If any guideline is not met, mark the test with a **⚠️ Severity** level:
 
@@ -125,9 +125,9 @@ If any guideline is not met, mark the test with a **⚠️ Severity** level:
 
 ## 🧩 Input Schema
 
-Provide C# code to be tested via:  
+Provide C# code to be tested via:
 
-- Inline ```csharp``` blocks, or  
+- Inline ```csharp``` blocks, or
 - Referenced method names from a source file
 
 ## 🧾 Output Schema
@@ -144,18 +144,18 @@ AI should return a **complete C# test fixture file**:
 
 ## 🧩 CI/CD Integration Notes
 
-- Compatible with: `dotnet test --filter Category=Short`  
-- Include `[Parallelizable(ParallelScope.All)]` where thread-safe  
-- Keep execution time short (`MaxTimeShortCategory` enforced)  
-- Retry transient tests automatically using `Retry` attribute  
+- Compatible with: `dotnet test --filter Category=Short`
+- Include `[Parallelizable(ParallelScope.All)]` where thread-safe
+- Keep execution time short (`MaxTimeShortCategory` enforced)
+- Retry transient tests automatically using `Retry` attribute
 
 ---
 
 ## 🧭 Prompt Optimization Notes
 
-- Use deterministic formatting (consistent indentation, braces).  
-- Never include generic “example” placeholders in generated code.  
-- Prefer correctness and compile-ability over verbosity.  
+- Use deterministic formatting (consistent indentation, braces).
+- Never include generic “example” placeholders in generated code.
+- Prefer correctness and compile-ability over verbosity.
 - Keep summaries concise and action-oriented.
 
 ---
@@ -189,22 +189,22 @@ public sealed class MyUtilityClassTests
 
 ## 🔍 Suggested Enhancements for Future Versions
 
-- Add **automatic test naming heuristics** (based on behavior verbs)  
-- Include **mock generation hints** for common patterns (ILogger, HttpClient)  
-- Extend prompt for **parameterized tests** using `[TestCase]`  
-- Integrate with **AI-based coverage estimation tools** (e.g., Roslyn analyzers)  
-- Add **code complexity metrics** to suggest additional test cases  
+- Add **automatic test naming heuristics** (based on behavior verbs)
+- Include **mock generation hints** for common patterns (ILogger, HttpClient)
+- Extend prompt for **parameterized tests** using `[TestCase]`
+- Integrate with **AI-based coverage estimation tools** (e.g., Roslyn analyzers)
+- Add **code complexity metrics** to suggest additional test cases
 
 ---
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
 
 ---
-

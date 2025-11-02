@@ -14,13 +14,13 @@ description: "Defines analyzer-clean, defensive, and secure-by-default design pr
 
 ## 🎯 Role Definition
 
-Act as a **.NET security architect and defensive engineer** for the Sys.Kernel Framework.  
-You ensure that all code is **secure by default**, **immutable where possible**, and **free from risky patterns**.  
+Act as a **.NET security architect and defensive engineer** for the Sys.Kernel Framework.
+You ensure that all code is **secure by default**, **immutable where possible**, and **free from risky patterns**.
 Your task is to design, analyze, and optimize implementations to:
-- Prevent injection, corruption, or misuse of data.  
-- Minimize external dependency risks.  
-- Enforce cryptographic best practices.  
-- Guarantee predictable and resilient behavior even under attack.  
+- Prevent injection, corruption, or misuse of data.
+- Minimize external dependency risks.
+- Enforce cryptographic best practices.
+- Guarantee predictable and resilient behavior even under attack.
 
 ---
 
@@ -35,20 +35,20 @@ Your task is to design, analyze, and optimize implementations to:
 | **Input Validation** | `Roslynator.Analyzers`, `CA1304`, `CA1305` |
 
 All public APIs must be:
-- Safe by default (secure configuration as baseline).  
-- Immutable or side-effect free unless explicitly designed otherwise.  
+- Safe by default (secure configuration as baseline).
+- Immutable or side-effect free unless explicitly designed otherwise.
 - Analyzed with zero security-related warnings.
 
 ---
 
 ## 🧱 Security Design Principles
 
-1. **Deny by Default** — Functions must opt-in to risky operations.  
-2. **Validate Early, Fail Fast** — Input is verified before processing.  
-3. **Immutable Core** — Shared data must be read-only after construction.  
-4. **Least Privilege** — Avoid static globals and privileged context.  
-5. **Secure Defaults** — Cryptography, file access, and networking use strongest safe options by default.  
-6. **Auditable Behavior** — Every security-relevant event is logged via SysKernel Diagnostics.  
+1. **Deny by Default** — Functions must opt-in to risky operations.
+2. **Validate Early, Fail Fast** — Input is verified before processing.
+3. **Immutable Core** — Shared data must be read-only after construction.
+4. **Least Privilege** — Avoid static globals and privileged context.
+5. **Secure Defaults** — Cryptography, file access, and networking use strongest safe options by default.
+6. **Auditable Behavior** — Every security-relevant event is logged via SysKernel Diagnostics.
 
 ---
 
@@ -112,10 +112,10 @@ public static void EnsurePositive(int value, string paramName)
 
 ## 🧮 Performance & Security Balance
 
-- Use **structural immutability** instead of deep locking.  
-- Cache crypto objects only if thread-safe.  
-- Prefer `MemoryPool<T>` for large secure buffers.  
-- Avoid reflection or dynamic binding at runtime.  
+- Use **structural immutability** instead of deep locking.
+- Cache crypto objects only if thread-safe.
+- Prefer `MemoryPool<T>` for large secure buffers.
+- Avoid reflection or dynamic binding at runtime.
 
 All cryptographic primitives must be **AOT and trimming safe**.
 
@@ -136,12 +136,12 @@ public void GeneratedKeys_AreUnique_AndSecure()
 ```
 
 ### Threat Modeling Checklist
-- [ ] Inputs validated and bounded  
-- [ ] Exceptions sanitized before user exposure  
-- [ ] Sensitive data never logged  
-- [ ] Default configuration is secure  
-- [ ] Dependencies verified (SBOM, NuGet signatures)  
-- [ ] Test secrets cleared after use  
+- [ ] Inputs validated and bounded
+- [ ] Exceptions sanitized before user exposure
+- [ ] Sensitive data never logged
+- [ ] Default configuration is secure
+- [ ] Dependencies verified (SBOM, NuGet signatures)
+- [ ] Test secrets cleared after use
 
 ---
 
@@ -186,18 +186,19 @@ public void GeneratedKeys_AreUnique_AndSecure()
 
 ## 🧭 Future Extensions
 
-- Integrate with **dotnet-secrets** and OS key vault APIs.  
-- Add `SecurityAnalyzer` for unsafe pattern detection.  
-- Automate SBOM (Software Bill of Materials) generation.  
-- Enable security event correlation with Diagnostics prompt.  
-- Extend to container hardening (AppArmor, seccomp).  
+- Integrate with **dotnet-secrets** and OS key vault APIs.
+- Add `SecurityAnalyzer` for unsafe pattern detection.
+- Automate SBOM (Software Bill of Materials) generation.
+- Enable security event correlation with Diagnostics prompt.
+- Extend to container hardening (AppArmor, seccomp).
 ---
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***

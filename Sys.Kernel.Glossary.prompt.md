@@ -8,13 +8,16 @@ updated: "2025-11-01"
 description: "The authoritative glossary defining all terminology, concepts, and patterns used throughout the Sys.Kernel AI Prompt Library and framework implementation. Serves as the single source of truth for semantic consistency."
 ---
 
+![Syntony Framework — Clarity · Strength · Dignity](./Assets/Syntony.png)
+
+---
 # 📖 Sys.Kernel Framework Glossary
 
-> *"Clarity begins with shared language. Every term carries meaning; every pattern reflects intention.  
-> Order begins with shared meaning."*  
+> *"Clarity begins with shared language. Every term carries meaning; every pattern reflects intention.
+> Order begins with shared meaning."*
 > — Josef Hahnl, Syntony Austria
 
-This glossary defines the **canonical terminology** used across all Sys.Kernel prompts, codebase, and documentation.  
+This glossary defines the **canonical terminology** used across all Sys.Kernel prompts, codebase, and documentation.
 When terms conflict or require clarification, this document serves as the **authoritative reference**.
 
 **Purpose:**
@@ -94,25 +97,25 @@ Core terms with concise definitions and prompt references:
 ## 🎯 Core Philosophy Terms
 
 ### Königsweg
-**Origin:** German, "The Royal Way" or "King's Path"  
+**Origin:** German, "The Royal Way" or "King's Path"
 **Etymology:** From your book *"Klarheit · Stärke · Würde: Auf dem Königsweg"*
 
-**Definition:**  
+**Definition:**
 The foundational philosophy of Sys.Kernel, embodying three inseparable core principles that guide every architectural, performance, and quality decision:
 
 - **Klarheit (Clarity):** Code and architecture that reveals intent without ambiguity
 - **Stärke (Strength):** Resilient, performant, and deterministic systems
 - **Würde (Dignity):** Respect for complexity, intentional design, and professional craftsmanship
 
-**Usage Context:**  
+**Usage Context:**
 Referred to throughout all prompts as the ultimate decision-making principle. When trade-offs arise, Königsweg provides the framework for resolution.
 
 **Primary Prompt:** [Sys.Kernel.Master.prompt.md](./Sys.Kernel.Master.prompt.md)
 
 **Example Application:**
-> "This refactoring follows the Königsweg principle by:  
-> - Making the dependency chain explicit (Clarity)  
-> - Removing allocations from the hot path (Strength)  
+> "This refactoring follows the Königsweg principle by:
+> - Making the dependency chain explicit (Clarity)
+> - Removing allocations from the hot path (Strength)
 > - Maintaining API elegance and backward compatibility (Würde)"
 
 **See Also:** [Klarheit](#klarheit-clarity), [Stärke](#stärke-strength), [Würde](#würde-dignity)
@@ -121,10 +124,10 @@ Referred to throughout all prompts as the ultimate decision-making principle. Wh
 
 ### Klarheit (Clarity)
 
-**Definition:**  
+**Definition:**
 The principle that code should be **self-documenting** and **architecturally transparent**. Every identifier, every layer boundary, and every API contract should reveal its purpose without requiring deep investigation or external documentation.
 
-**Core Tenet:**  
+**Core Tenet:**
 *"If you need a comment to explain what the code does, the code is unclear."*
 
 **Manifestations in Sys.Kernel:**
@@ -148,8 +151,8 @@ The principle that code should be **self-documenting** and **architecturally tra
 - Are dependencies explicit in constructors/method signatures?
 - Does the type name match its actual responsibility?
 
-**Primary Prompts:**  
-[Sys.Kernel.Better.Naming.prompt.md](./Sys.Kernel.Better.Naming.prompt.md)  
+**Primary Prompts:**
+[Sys.Kernel.Better.Naming.prompt.md](./Sys.Kernel.Better.Naming.prompt.md)
 [Sys.Kernel.Architecture.Verification.prompt.md](./Sys.Kernel.Architecture.Verification.prompt.md)
 
 **Example - Unclear vs. Clear:**
@@ -157,7 +160,7 @@ The principle that code should be **self-documenting** and **architecturally tra
 // ❌ Lacks Klarheit
 public class Handler
 {
-    public void Process(object data) 
+    public void Process(object data)
     {
         var x = Config.Get("timeout");
         // ... what does this handle?
@@ -168,12 +171,12 @@ public class Handler
 public sealed class ConfigurationReloadHandler
 {
     private readonly TimeSpan _reloadTimeout;
-    
+
     public ConfigurationReloadHandler(TimeSpan reloadTimeout)
     {
         _reloadTimeout = reloadTimeout;
     }
-    
+
     public void HandleReloadRequest(ConfigurationReloadRequest request)
     {
         // Intent is immediately clear
@@ -187,10 +190,10 @@ public sealed class ConfigurationReloadHandler
 
 ### Stärke (Strength)
 
-**Definition:**  
+**Definition:**
 The principle that systems must be **robust under stress**, **performant under load**, and **deterministic in behavior**. Strength is measured by resilience and consistency, not just initial correctness.
 
-**Core Tenet:**  
+**Core Tenet:**
 *"Strong systems fail gracefully and perform predictably, even at their limits."*
 
 **Manifestations in Sys.Kernel:**
@@ -220,8 +223,8 @@ The principle that systems must be **robust under stress**, **performant under l
 - No retry logic for transient failures
 - Performance regressions merged to main
 
-**Primary Prompts:**  
-[Sys.Kernel.Framework.Architecture.prompt.md](./Sys.Kernel.Framework.Architecture.prompt.md)  
+**Primary Prompts:**
+[Sys.Kernel.Framework.Architecture.prompt.md](./Sys.Kernel.Framework.Architecture.prompt.md)
 [Sys.Kernel.Thread.Safety.Concurrency.prompt.md](./Sys.Kernel.Thread.Safety.Concurrency.prompt.md)
 
 **Example - Weak vs. Strong:**
@@ -230,7 +233,7 @@ The principle that systems must be **robust under stress**, **performant under l
 public class Cache
 {
     private Dictionary<string, string> _data = new();
-    
+
     public string Get(string key)
     {
         return _data[key]; // Throws if key missing
@@ -241,12 +244,12 @@ public class Cache
 public sealed class ThreadSafeCache
 {
     private readonly ConcurrentDictionary<string, string> _data = new();
-    
+
     public bool TryGet(string key, [NotNullWhen(true)] out string? value)
     {
         return _data.TryGetValue(key, out value);
     }
-    
+
     public string GetOrAdd(string key, Func<string, string> factory)
     {
         return _data.GetOrAdd(key, factory);
@@ -260,10 +263,10 @@ public sealed class ThreadSafeCache
 
 ### Würde (Dignity)
 
-**Definition:**  
+**Definition:**
 The principle that even in the face of complexity, design must remain **intentional**, **respectful**, and **elegant**. Code written with dignity acknowledges the humans who will maintain it, the systems that depend on it, and the users who trust it.
 
-**Core Tenet:**  
+**Core Tenet:**
 *"Every line of code is a message to future maintainers. Write with respect."*
 
 **Manifestations in Sys.Kernel:**
@@ -290,9 +293,9 @@ The principle that even in the face of complexity, design must remain **intentio
 - APIs that invite misuse (unclear ownership, hidden state)
 - Condescending comments (`// Obviously, this...`)
 
-**Primary Prompts:**  
-All prompts embody this principle implicitly, especially:  
-[Sys.Kernel.Documentation.prompt.md](./Sys.Kernel.Documentation.prompt.md)  
+**Primary Prompts:**
+All prompts embody this principle implicitly, especially:
+[Sys.Kernel.Documentation.prompt.md](./Sys.Kernel.Documentation.prompt.md)
 [Sys.Kernel.Better.Naming.prompt.md](./Sys.Kernel.Better.Naming.prompt.md)
 
 **Example - Undignified vs. Dignified:**
@@ -300,13 +303,13 @@ All prompts embody this principle implicitly, especially:
 // ❌ Lacks Würde
 public class Thing
 {
-    public void DoIt(string x) 
+    public void DoIt(string x)
     {
-        try 
+        try
         {
             // stuff
-        } 
-        catch 
+        }
+        catch
         {
             // ignore
         }
@@ -330,7 +333,7 @@ public class Thing
 public void ReloadConfiguration(IConfigurationSource configurationSource)
 {
     ArgumentNullException.ThrowIfNull(configurationSource);
-    
+
     try
     {
         var newConfig = configurationSource.Load();
@@ -354,12 +357,12 @@ public void ReloadConfiguration(IConfigurationSource configurationSource)
 
 ### Analyzer-Clean
 
-**Definition:**  
+**Definition:**
 Code that compiles with **zero warnings** from all configured Roslyn analyzers and produces no style violations in `.editorconfig`. This is not a goal—it's a **mandatory requirement** across the entire Sys.Kernel framework.
 
 **Requirement Level:** **MANDATORY** (CI/CD fails on any violation)
 
-**Philosophy:**  
+**Philosophy:**
 > "Analyzer warnings are not suggestions—they are violations of architectural principles."
 
 **Covered Analyzers:**
@@ -380,12 +383,12 @@ Code that compiles with **zero warnings** from all configured Roslyn analyzers a
 3. **Pre-commit:** Git hooks validate analyzer cleanliness
 4. **Code review:** Automated checks block PR merge
 
-**Prohibition:**  
-❌ **No** `#pragma warning disable` suppressions  
-❌ **No** `.editorconfig` severity overrides to hide warnings  
+**Prohibition:**
+❌ **No** `#pragma warning disable` suppressions
+❌ **No** `.editorconfig` severity overrides to hide warnings
 ❌ **No** "temporary" warning suppressions
 
-**Exception Process:**  
+**Exception Process:**
 If an analyzer produces a false positive:
 1. Document the reasoning thoroughly
 2. File an issue with the analyzer maintainer
@@ -421,10 +424,10 @@ dotnet format analyzers --verify-no-changes
 
 ### Analyzer Discipline
 
-**Definition:**  
+**Definition:**
 The Sys.Kernel principle that analyzers are **binding constraints**, not advisory suggestions. Every analyzer warning represents a violation of architectural, performance, or quality principles.
 
-**Core Tenet:**  
+**Core Tenet:**
 *"If the analyzer says it's wrong, it is wrong—regardless of whether the code 'works'."*
 
 **Rationale:**
@@ -447,10 +450,10 @@ The Sys.Kernel principle that analyzers are **binding constraints**, not advisor
 
 ### Layered Architecture
 
-**Definition:**  
+**Definition:**
 Sys.Kernel's strict hierarchical structure where each layer depends **only** on layers below it—never above or sideways. This creates a **directed acyclic graph** (DAG) of dependencies, enforced at build time and validated in CI.
 
-**Architectural Principle:**  
+**Architectural Principle:**
 *"Dependencies flow downward, abstractions bubble upward."*
 
 **Layer Hierarchy:**
@@ -522,7 +525,7 @@ public void Core_ShouldOnlyDependOn_Sdk()
             "System",
             "System.*")
         .GetResult();
-    
+
     Assert.That(result.IsSuccessful, Is.True);
 }
 ```
@@ -533,10 +536,10 @@ public void Core_ShouldOnlyDependOn_Sdk()
 
 ### SDK Foundation
 
-**Definition:**  
+**Definition:**
 The `Kernel.Sdk` assembly serves as the **self-describing metadata layer** containing all attributes, constants, identifiers, and base exceptions used by the framework. It is the **interface to the build system** and the **contract between developer and compiler**.
 
-**Architectural Position:**  
+**Architectural Position:**
 The SDK is the **bottom of the dependency chain**—all other layers depend on it, but it depends only on BCL.
 
 **Purpose:**
@@ -546,7 +549,7 @@ The SDK is the **bottom of the dependency chain**—all other layers depend on i
 4. **Defines the interface** to the framework (what developers import)
 5. **Attribute authority** (all framework attributes originate here)
 
-**Key Principle:**  
+**Key Principle:**
 > "All attributes and base types **originate** from Sdk; other layers **extend** but **never redefine** them."
 
 **Contents:**
@@ -571,7 +574,7 @@ namespace Syntony.Kernel.Sdk;
 public sealed class KernelComponentAttribute : Attribute
 {
     public string ComponentId { get; }
-    
+
     public KernelComponentAttribute(string componentId)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(componentId);
@@ -585,7 +588,7 @@ public sealed class KernelComponentAttribute : Attribute
 namespace Syntony.Kernel.Core;
 
 [KernelComponent("ServiceRegistry")]
-public sealed class ServiceRegistry 
+public sealed class ServiceRegistry
 {
     // Implementation
 }
@@ -606,10 +609,10 @@ public sealed class CoreComponentAttribute : Attribute { }
 
 ### Null Object Pattern
 
-**Definition:**  
+**Definition:**
 A design pattern where every interface or abstract type has a corresponding **"Null" implementation** that provides safe, intentional, analyzer-clean no-op behavior. This eliminates null checks throughout the codebase.
 
-**Philosophy:**  
+**Philosophy:**
 > "Even nothingness should act with dignity." — Sys.Kernel Design Principle
 
 **Purpose:**
@@ -649,23 +652,23 @@ public sealed class NullLogger : ILogger
     /// Singleton instance of the null logger.
     /// </summary>
     public static readonly ILogger Instance = new NullLogger();
-    
+
     // Private constructor prevents external instantiation
     private NullLogger() { }
-    
+
     /// <summary>
     /// No-op: logging is silently ignored.
     /// </summary>
-    public void Log(LogLevel level, string message) 
-    { 
+    public void Log(LogLevel level, string message)
+    {
         // Intentional no-op
     }
-    
+
     /// <summary>
     /// No-op: exception logging is silently ignored.
     /// </summary>
-    public void LogException(Exception exception) 
-    { 
+    public void LogException(Exception exception)
+    {
         // Intentional no-op
     }
 }
@@ -676,22 +679,22 @@ public sealed class NullLogger : ILogger
 public class ServiceHost
 {
     private readonly ILogger _logger;
-    
+
     public ServiceHost(ILogger? logger = null)
     {
         // Null coalescing ensures we always have a valid logger
         _logger = logger ?? NullLogger.Instance;
     }
-    
+
     public void Start()
     {
         // Safe to call without null check
         _logger.Log(LogLevel.Information, "Service starting");
-        
+
         // No branching needed
         ProcessRequest();
     }
-    
+
     private void ProcessRequest()
     {
         // Logger is never null
@@ -711,8 +714,8 @@ public void NullObject_Classes_Must_Be_Sealed_And_Singleton()
         .Should().BeSealed()
         .And().HaveStaticFieldOfType("Instance")
         .GetResult();
-    
-    Assert.That(result.IsSuccessful, Is.True, 
+
+    Assert.That(result.IsSuccessful, Is.True,
         "Null Object pattern violation detected");
 }
 ```
@@ -724,8 +727,8 @@ public void NullObject_Classes_Must_Be_Sealed_And_Singleton()
 | **Stärke** | Predictable runtime paths, fewer exceptions |
 | **Würde** | Even absence behaves gracefully—intentional silence |
 
-**Design Note:**  
-The Null Object Pattern is now an **architectural invariant** of Sys.Kernel:  
+**Design Note:**
+The Null Object Pattern is now an **architectural invariant** of Sys.Kernel:
 > Every component exists—even when it does nothing.
 
 **See Also:** [Würde](#würde-dignity), [Analyzer-Clean](#analyzer-clean)
@@ -734,7 +737,7 @@ The Null Object Pattern is now an **architectural invariant** of Sys.Kernel:
 
 ### Deterministic Build
 
-**Definition:**  
+**Definition:**
 A build process that produces **byte-identical outputs** when given identical inputs, regardless of build environment, timestamp, or machine-specific settings.
 
 **Purpose:**
@@ -755,13 +758,13 @@ A build process that produces **byte-identical outputs** when given identical in
 <PropertyGroup>
   <!-- Enable deterministic compilation -->
   <Deterministic>true</Deterministic>
-  
+
   <!-- CI/CD mode (embeds git commit info) -->
   <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  
+
   <!-- Embed PDB in assembly -->
   <DebugType>embedded</DebugType>
-  
+
   <!-- Reproducible source paths -->
   <PathMap>$(MSBuildProjectDirectory)=/src/</PathMap>
 </PropertyGroup>
@@ -789,7 +792,7 @@ sha256sum build1.dll build2.dll
 
 ### Runtime Determinism
 
-**Definition:**  
+**Definition:**
 Guarantee that **identical inputs produce identical runtime results**, enforced through deterministic builds, reproducible environments, and elimination of non-deterministic operations.
 
 **Scope:**
@@ -838,7 +841,7 @@ public byte[] GenerateKey()
 
 ### AAA Pattern
 
-**Definition:**  
+**Definition:**
 **Arrange-Act-Assert**, the standard structure for all unit tests in Sys.Kernel. This pattern enforces clarity and testability by separating test phases.
 
 **Structure:**
@@ -852,12 +855,12 @@ public void MethodName_Condition_ExpectedBehaviorTest()
     var sut = new SystemUnderTest();
     var input = new InputData("test-value");
     var expectedOutput = new ExpectedResult(42);
-    
+
     // ============================================
     // ACT: Execute the method being tested
     // ============================================
     var actualOutput = sut.MethodUnderTest(input);
-    
+
     // ============================================
     // ASSERT: Verify the outcome
     // ============================================
@@ -921,7 +924,7 @@ public void Test1()
 
 ### Test Categories
 
-**Definition:**  
+**Definition:**
 Classification system for organizing and filtering tests in CI/CD pipelines using the `[Category]` attribute.
 
 **Standard Categories:**
@@ -930,25 +933,25 @@ public static class TestCategory
 {
     /// <summary>Fast unit tests (< 1 second).</summary>
     public const string Short = nameof(Short);
-    
+
     /// <summary>NetArchTest architecture validation.</summary>
     public const string Architecture = nameof(Architecture);
-    
+
     /// <summary>BenchmarkDotNet performance tests.</summary>
     public const string Performance = nameof(Performance);
-    
+
     /// <summary>Cross-component integration tests.</summary>
     public const string Integration = nameof(Integration);
-    
+
     /// <summary>Security and vulnerability tests.</summary>
     public const string Security = nameof(Security);
-    
+
     /// <summary>Thread-safety and concurrency tests.</summary>
     public const string Concurrency = nameof(Concurrency);
-    
+
     /// <summary>API compatibility and versioning tests.</summary>
     public const string Versioning = nameof(Versioning);
-    
+
     /// <summary>Logging and telemetry validation.</summary>
     public const string Diagnostics = nameof(Diagnostics);
 }
@@ -1000,7 +1003,7 @@ dotnet test --filter "Category=Short|Category=Architecture"
 
 ### Test Timeouts
 
-**Definition:**  
+**Definition:**
 Maximum execution time allowed for different test categories before automatic failure, configured via `[MaxTime]` attribute.
 
 **Standard Timeouts (milliseconds):**
@@ -1009,13 +1012,13 @@ public static class TestTimeout
 {
     /// <summary>Unit tests: 1 second maximum.</summary>
     public const int UnitTest = 1000;
-    
+
     /// <summary>Integration tests: 5 seconds maximum.</summary>
     public const int IntegrationTest = 5000;
-    
+
     /// <summary>Performance benchmarks: 30 seconds maximum.</summary>
     public const int PerformanceTest = 30000;
-    
+
     /// <summary>Architecture validation: 10 seconds maximum.</summary>
     public const int ArchitectureTest = 10000;
 }
@@ -1057,7 +1060,7 @@ If a test exceeds its timeout:
 
 ### Test Retry Policy
 
-**Definition:**  
+**Definition:**
 Automatic retry configuration for handling transient test failures using the `[Retry]` attribute.
 
 **Standard Retry Counts:**
@@ -1066,7 +1069,7 @@ public static class TestRetry
 {
     /// <summary>Minimum retry: 2 attempts (3 total runs).</summary>
     public const int Min = 2;
-    
+
     /// <summary>Maximum retry for flaky tests: 5 attempts.</summary>
     public const int Max = 5;
 }
@@ -1105,7 +1108,7 @@ public void Add_TwoNumbers_ReturnsSum_Test()
 }
 ```
 
-**Philosophy:**  
+**Philosophy:**
 If a unit test needs retry, it's either:
 1. Not a unit test (has external dependencies)
 2. Testing non-deterministic behavior
@@ -1119,7 +1122,7 @@ If a unit test needs retry, it's either:
 
 ### TestMessage Constants
 
-**Definition:**  
+**Definition:**
 Standardized test result messages for consistency across the test suite.
 
 **Standard Messages:**
@@ -1128,16 +1131,16 @@ public static class TestMessage
 {
     /// <summary>Standard success message for all passing tests.</summary>
     public const string TestPassed = "Test passed successfully";
-    
+
     /// <summary>Test skipped due to unmet preconditions.</summary>
     public const string TestSkipped = "Test skipped: precondition not met";
-    
+
     /// <summary>Test result inconclusive (neither pass nor fail).</summary>
     public const string TestInconclusive = "Test result inconclusive";
 }
 ```
 
-**Mandatory Usage:**  
+**Mandatory Usage:**
 **Every test must end with:**
 ```csharp
 Assert.Pass(TestMessage.TestPassed);
@@ -1159,10 +1162,10 @@ Assert.Pass(TestMessage.TestPassed);
 
 ### Secure-by-Default
 
-**Definition:**  
+**Definition:**
 Framework design principle where the **default configuration and behavior prioritize security** without requiring explicit hardening by users. Insecure options require explicit opt-in.
 
-**Philosophy:**  
+**Philosophy:**
 > "Make the right thing the easy thing. Make the wrong thing hard."
 
 **Examples in Sys.Kernel:**
@@ -1186,7 +1189,7 @@ public sealed class FileService
         // Default: read-only, no sharing
         return File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read);
     }
-    
+
     // Insecure option requires explicit intent
     public FileStream OpenFileUnsafe(string path, FileShare shareMode)
     {
@@ -1205,10 +1208,10 @@ public sealed class FileService
 
 ### Immutable Core
 
-**Definition:**  
+**Definition:**
 Architectural principle where **shared data structures are read-only after construction**, eliminating entire classes of concurrency bugs and security vulnerabilities.
 
-**Core Tenet:**  
+**Core Tenet:**
 *"Immutability is the ultimate thread safety."*
 
 **Benefits:**
@@ -1260,13 +1263,13 @@ public sealed class ConfigurationBuilder
 {
     private string? _connectionString;
     private int _timeout = 30;
-    
+
     public ConfigurationBuilder WithConnectionString(string value)
     {
         _connectionString = value;
         return this;
     }
-    
+
     public Configuration Build()
     {
         return new Configuration(_connectionString!, _timeout);
@@ -1277,7 +1280,7 @@ public sealed class Configuration
 {
     public string ConnectionString { get; }
     public int Timeout { get; }
-    
+
     internal Configuration(string connectionString, int timeout)
     {
         ConnectionString = connectionString;
@@ -1298,8 +1301,8 @@ public class Configuration
 }
 ```
 
-**Primary Prompts:**  
-[Sys.Kernel.Security.Safe.Defaults.prompt.md](./Sys.Kernel.Security.Safe.Defaults.prompt.md)  
+**Primary Prompts:**
+[Sys.Kernel.Security.Safe.Defaults.prompt.md](./Sys.Kernel.Security.Safe.Defaults.prompt.md)
 [Sys.Kernel.Thread.Safety.Concurrency.prompt.md](./Sys.Kernel.Thread.Safety.Concurrency.prompt.md)
 
 **See Also:** [Thread Safety Principle](#thread-safety-principle), [Stärke](#stärke-strength)
@@ -1308,7 +1311,7 @@ public class Configuration
 
 ### STRIDE Threat Model
 
-**Definition:**  
+**Definition:**
 Security analysis framework categorizing threats into six types, used throughout Sys.Kernel for threat modeling and security testing.
 
 **Acronym:** **S**poofing · **T**ampering · **R**epudiation · **I**nformation Disclosure · **D**enial of Service · **E**levation of Privilege
@@ -1340,7 +1343,7 @@ public sealed record SecureConfiguration
 {
     [SensitiveData] // Redacted in logs
     public required string ApiKey { get; init; } // Immutable (Tampering)
-    
+
     public required string Endpoint { get; init; }
 }
 ```
@@ -1350,14 +1353,14 @@ public sealed record SecureConfiguration
 [Test, Category(TestCategory.Security)]
 public void Logging_DoesNotLeakSensitiveData_Test() // Information Disclosure
 {
-    var config = new SecureConfiguration 
-    { 
+    var config = new SecureConfiguration
+    {
         ApiKey = "secret-key-12345",
         Endpoint = "https://api.example.com"
     };
-    
+
     var logOutput = CaptureLogOutput(() => _logger.LogConfiguration(config));
-    
+
     Assert.That(logOutput, Does.Not.Contain("secret-key-12345"));
     Assert.That(logOutput, Does.Contain("[REDACTED]"));
 }
@@ -1366,10 +1369,10 @@ public void Logging_DoesNotLeakSensitiveData_Test() // Information Disclosure
 public void Queue_EnforcesSizeLimit_Test() // Denial of Service
 {
     var queue = new BoundedQueue<string>(maxSize: 100);
-    
+
     for (int i = 0; i < 100; i++)
         queue.Enqueue($"Item {i}");
-    
+
     Assert.Throws<QueueFullException>(() => queue.Enqueue("Overflow"));
 }
 ```
@@ -1384,7 +1387,7 @@ public void Queue_EnforcesSizeLimit_Test() // Denial of Service
 
 ### GC Pressure
 
-**Definition:**  
+**Definition:**
 The frequency and volume of garbage collection events caused by heap allocations. High GC pressure degrades performance and increases latency unpredictability.
 
 **Classification:**
@@ -1470,7 +1473,7 @@ foreach (var item in items)
 
 ### Allocation Type
 
-**Definition:**  
+**Definition:**
 Classification of where memory is allocated and its lifetime characteristics, critical for understanding GC impact.
 
 **Categories:**
@@ -1552,7 +1555,7 @@ public void ProcessLargeFile(string path)
 
 ### Hot Path
 
-**Definition:**  
+**Definition:**
 Code executed **frequently** or in **performance-critical scenarios** where even microsecond optimizations matter. Typically called thousands to millions of times per second.
 
 **Identification:**
@@ -1604,7 +1607,7 @@ public class FormattingBenchmarks
     {
         return string.Format("Value: {0}", 42);
     }
-    
+
     [Benchmark]
     public string SpanFormat()
     {
@@ -1627,7 +1630,7 @@ public class FormattingBenchmarks
 
 ### AOT-Friendly
 
-**Definition:**  
+**Definition:**
 Code compatible with **Ahead-of-Time (AOT) compilation**, where IL is compiled to native code before runtime, eliminating JIT overhead.
 
 **Benefits:**
@@ -1690,7 +1693,7 @@ dotnet publish -c Release -r linux-x64 /p:PublishAot=true
 
 ### EventSource
 
-**Definition:**  
+**Definition:**
 .NET's structured logging infrastructure providing **high-performance ETW (Event Tracing for Windows)** integration with minimal allocation overhead.
 
 **Sys.Kernel Standard:**
@@ -1699,23 +1702,23 @@ dotnet publish -c Release -r linux-x64 /p:PublishAot=true
 public sealed class SysKernelEventSource : EventSource
 {
     public static readonly SysKernelEventSource Log = new();
-    
+
     private SysKernelEventSource() : base(EventSourceSettings.EtwSelfDescribingEventFormat)
     {
     }
-    
+
     [Event(1, Level = EventLevel.Informational, Message = "Service {0} started")]
     public void ServiceStarted(string serviceName)
     {
         WriteEvent(1, serviceName);
     }
-    
+
     [Event(2, Level = EventLevel.Error, Message = "Service {0} failed: {1}")]
     public void ServiceFailed(string serviceName, string error)
     {
         WriteEvent(2, serviceName, error);
     }
-    
+
     [NonEvent]
     public void ServiceFailedWithException(string serviceName, Exception ex)
     {
@@ -1759,7 +1762,7 @@ dotnet-trace collect --process-id $(pidof MyApp) \
 
 ### EventSource Discipline
 
-**Definition:**  
+**Definition:**
 The Sys.Kernel principle that all telemetry uses **analyzer-clean EventSource design** with no dynamic string formats, ensuring type safety and performance.
 
 **Rules:**
@@ -1795,22 +1798,22 @@ public void ProcessingItem(string itemName)
 
 ### ActivitySource
 
-**Definition:**  
+**Definition:**
 OpenTelemetry-compatible distributed tracing API for correlating operations across service boundaries using W3C Trace Context standard.
 
 **Sys.Kernel Standard:**
 ```csharp
 public sealed class TracedService
 {
-    private static readonly ActivitySource s_activitySource = 
+    private static readonly ActivitySource s_activitySource =
         new("Syntony.Kernel.Diagnostics", "1.0.0");
-    
+
     public async Task ProcessRequestAsync(string requestId)
     {
         using var activity = s_activitySource.StartActivity("ProcessRequest");
         activity?.SetTag("request.id", requestId);
         activity?.SetTag("service.name", "ConfigurationService");
-        
+
         try
         {
             await DoWorkAsync();
@@ -1852,7 +1855,7 @@ Trace ID: 4bf92f3577b34da6a3ce929d0e0e4736
 
 ### Structured Logging
 
-**Definition:**  
+**Definition:**
 Logging approach using **message templates** and **strongly-typed parameters** instead of string concatenation, enabling queryable log data.
 
 **Pattern:**
@@ -1893,7 +1896,7 @@ public sealed class SysKernelLogger
             configPath,
             settingsCount);
     }
-    
+
     // PII-sensitive logging
     public void LogUserAction(
         string userId,
@@ -1919,7 +1922,7 @@ public sealed class SysKernelLogger
 
 ### SemVer (Semantic Versioning)
 
-**Definition:**  
+**Definition:**
 Versioning scheme using `MAJOR.MINOR.PATCH` format with strict compatibility rules.
 
 **Format:** `MAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]`
@@ -1971,7 +1974,7 @@ Versioning scheme using `MAJOR.MINOR.PATCH` format with strict compatibility rul
 
 ### Semantic Version Integrity
 
-**Definition:**  
+**Definition:**
 Consistent SemVer management with **PublicApiAnalyzer verification**, ensuring backward compatibility promises are kept.
 
 **Mechanism:**
@@ -2015,7 +2018,7 @@ dotnet build -warnaserror:RS0016
 
 ### Public API Surface
 
-**Definition:**  
+**Definition:**
 All types and members marked `public` or `protected`, representing the framework's **contractual interface** with consumers.
 
 **Scope:**
@@ -2055,7 +2058,7 @@ public void Register<T>() where T : class;
 
 ### Beast Mode
 
-**Definition:**  
+**Definition:**
 Autonomous AI agent execution mode that **persists until task completion** without requiring user intervention.
 
 **Activation Triggers:**
@@ -2100,7 +2103,7 @@ Direct Domain Prompt      Sequential Sub-Prompt Execution
 
 ### Confidence Score
 
-**Definition:**  
+**Definition:**
 Quantitative measure (0.0-1.0) of AI analysis certainty, combining multiple quality factors.
 
 **Calculation:**
@@ -2153,7 +2156,7 @@ public static double CalculateConfidence(AnalysisResult result)
 
 ### Sub-Prompt Orchestration
 
-**Definition:**  
+**Definition:**
 Master prompt's ability to invoke specialized domain prompts in dependency order, coordinating analysis across architecture, performance, security, and other domains.
 
 **Invocation Syntax:**
@@ -2219,7 +2222,7 @@ Master Prompt
 
 ### Member Ordering
 
-**Definition:**  
+**Definition:**
 Strict sequence for declaring members within a type to ensure consistency and readability.
 
 **Standard Order:**
@@ -2243,38 +2246,38 @@ public sealed class ServiceRegistry
 {
     // 1. Constants
     private const int DefaultCapacity = 16;
-    
+
     // 2. Static fields
     private static readonly object s_lock = new();
-    
+
     // 3. Instance fields
     private readonly ConcurrentDictionary<Type, object> _services;
     private int _registrationCount;
-    
+
     // 4. Constructors
     public ServiceRegistry()
     {
         _services = new(Environment.ProcessorCount, DefaultCapacity);
     }
-    
+
     // 5. Properties
     public int Count => _services.Count;
-    
+
     // 6. Events
     public event EventHandler<ServiceRegisteredEventArgs>? ServiceRegistered;
-    
+
     // 7. Public methods
     public void Register<T>(T instance) where T : class
     {
         // Implementation
     }
-    
+
     // 8. Private methods
     private void OnServiceRegistered(Type serviceType)
     {
         ServiceRegistered?.Invoke(this, new ServiceRegisteredEventArgs(serviceType));
     }
-    
+
     // 9. Nested types
     public sealed class ServiceRegisteredEventArgs : EventArgs
     {
@@ -2284,7 +2287,7 @@ public sealed class ServiceRegistry
 }
 ```
 
-**Enforcement:**  
+**Enforcement:**
 `.editorconfig` + `dotnet_sort_system_directives_first` + Roslynator analyzers
 
 **Primary Prompt:** [Sys.Kernel.Better.Naming.prompt.md](./Sys.Kernel.Better.Naming.prompt.md)
@@ -2295,7 +2298,7 @@ public sealed class ServiceRegistry
 
 ### EditorConfig Compliance
 
-**Definition:**  
+**Definition:**
 Adherence to project-wide code style rules defined in `.editorconfig` file.
 
 **Key Rules:**
@@ -2329,7 +2332,7 @@ dotnet format --verify-no-changes || exit 1
 
 ### CLS Compliance
 
-**Definition:**  
+**Definition:**
 Code conforming to **Common Language Specification**, ensuring interoperability across .NET languages (C#, F#, VB.NET).
 
 **Requirement:**
@@ -2378,10 +2381,10 @@ dotnet build -warnaserror:CA1014
 
 ### Thread Safety Principle
 
-**Definition:**  
+**Definition:**
 Ensures all shared resources are **lock-free**, **idempotent**, and **consistent** across async boundaries.
 
-**Core Tenet:**  
+**Core Tenet:**
 *"Concurrency bugs are prevented by design, not detected by testing."*
 
 **Key Principles:**
@@ -2397,9 +2400,10 @@ Ensures all shared resources are **lock-free**, **idempotent**, and **consistent
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***

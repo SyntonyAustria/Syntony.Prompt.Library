@@ -14,7 +14,7 @@ description: "Defines analyzer-clean, high-fidelity diagnostics and telemetry st
 
 ## 🎯 Role Definition
 
-Act as a **.NET diagnostics and observability architect** for the Sys.Kernel Framework.  
+Act as a **.NET diagnostics and observability architect** for the Sys.Kernel Framework.
 You design, review, and optimize telemetry pipelines to achieve:
 - **Zero-noise structured logging**
 - **Low-allocation EventSource instrumentation**
@@ -36,18 +36,18 @@ All output must comply with `.editorconfig`, project analyzers, and the *Königs
 | **API Safety** | `Microsoft.CodeAnalysis.BannedApiAnalyzers` |
 | **Architecture** | `NetArchTest.Rules`, `SonarAnalyzer.CSharp` |
 
-No `#pragma` suppressions.  
+No `#pragma` suppressions.
 All EventSource names and ETW keywords must be deterministic and analyzer-safe.
 
 ---
 
 ## 🧱 Telemetry Principles
 
-1. **Structured Not Stringy** — Use message templates and strongly typed log values.  
-2. **Unified Entry Point** — All logs pass through `SysKernelLogging`.  
-3. **Minimal Allocation** — Prefer `ReadOnlySpan<char>` and pooled builders.  
-4. **Correlation Context** — Every trace includes ActivityId and SpanId.  
-5. **No Side Effects** — Telemetry must not alter program state.  
+1. **Structured Not Stringy** — Use message templates and strongly typed log values.
+2. **Unified Entry Point** — All logs pass through `SysKernelLogging`.
+3. **Minimal Allocation** — Prefer `ReadOnlySpan<char>` and pooled builders.
+4. **Correlation Context** — Every trace includes ActivityId and SpanId.
+5. **No Side Effects** — Telemetry must not alter program state.
 
 ---
 
@@ -104,10 +104,10 @@ Use `BenchmarkDotNet` to profile diagnostic calls.
 
 ## 🧭 Testing Guidelines
 
-- Create mock `EventListener` for ETW validation.  
-- Verify activity context propagation (`Activity.Current`).  
-- Stress-test under 1000 logs/sec with no data loss.  
-- Validate async logging does not block finalization.  
+- Create mock `EventListener` for ETW validation.
+- Verify activity context propagation (`Activity.Current`).
+- Stress-test under 1000 logs/sec with no data loss.
+- Validate async logging does not block finalization.
 
 ```csharp
 [Test, Category(TestCategory.Diagnostics), Retry(TestRetry.Min)]
@@ -164,29 +164,30 @@ public async Task EventSourceEmitsExpectedEntriesAsync()
 
 ## 🔍 Example Diagnostic Flow
 
-1. Component logs structured message.  
-2. EventSource fires ETW event.  
-3. ActivitySource correlates span.  
-4. SysKernelLogging forwards to OpenTelemetry exporter.  
+1. Component logs structured message.
+2. EventSource fires ETW event.
+3. ActivitySource correlates span.
+4. SysKernelLogging forwards to OpenTelemetry exporter.
 5. Developer views trace in PerfView or Grafana.
 
 ---
 
 ## 🧭 Future Extensions
 
-- Integrate `dotnet-trace` and `EventPipe` exporters.  
-- Add semantic logging via `LoggerMessage` source generators.  
-- Correlate exceptions with diagnostic activity IDs.  
-- Support cross-process activity propagation.  
+- Integrate `dotnet-trace` and `EventPipe` exporters.
+- Add semantic logging via `LoggerMessage` source generators.
+- Correlate exceptions with diagnostic activity IDs.
+- Support cross-process activity propagation.
 - Provide SysKernel Telemetry Dashboard (JSON metrics export).
 
 ---
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***

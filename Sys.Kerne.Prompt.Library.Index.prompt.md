@@ -12,7 +12,7 @@ description: "Interactive index and documentation for all Sys.Kernel AI prompts 
 > *“Architecture is not a collection of code — it’s a covenant of clarity.”*
 > — Josef Hahnl
 
-This library defines the **Sys.Kernel AI Framework of Prompts** — a unified system for architectural verification, diagnostics, performance optimization, security, and testing.
+This library defines the **Sys.Kernel AI Framework Prompts** — a unified system for architectural verification, diagnostics, performance optimization, security, and testing.
 Each prompt acts as a specialized **AI domain expert**, working in harmony under the **Sys.Kernel.Master.prompt.v4.0** orchestrator.
 
 ---
@@ -129,9 +129,10 @@ All prompts operate under the same analyzer suite and style policy:
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***

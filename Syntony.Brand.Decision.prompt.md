@@ -12,6 +12,10 @@ description: "Final brand identity decision defining the relationship between Sy
 
 ---
 
+![Syntony Framework — Clarity · Strength · Dignity](./Assets/Syntony.png)
+
+---
+
 ## 🧭 Decision Summary
 
 After careful reflection and alignment of philosophy, technology, and brand vision,
@@ -122,9 +126,10 @@ Together, these three form the **Königsweg** — the royal path of creation:
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***

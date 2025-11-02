@@ -8,11 +8,16 @@ updated: "2025-10-31"
 description: "Unified orchestration prompt for the Sys.Kernel AI framework — integrating all domain prompts (architecture, performance, concurrency, documentation, testing, diagnostics, security, and versioning) into one master coordination system."
 ---
 
-# 🧭 Sys.Kernel Master Prompt (Level 4.0)
+# 🧭 Sys.Kernel Master Prompt
+
+---
+![Syntony Framework — Clarity · Strength · Dignity](./Assets/Syntony.png)
+
+---
 
 ## 🎯 Purpose
 
-This master prompt defines the **AI orchestration layer** for the Sys.Kernel Framework.  
+This master prompt defines the **AI orchestration layer** for the Sys.Kernel Framework.
 It coordinates all subordinate domain prompts to ensure **clarity, strength, and dignity** in every aspect of framework development — from architecture to performance, testing, and long-term maintainability.
 
 ---
@@ -58,7 +63,7 @@ All modules must compile **analyzer-clean** under:
 - `Microsoft.VisualStudio.Threading.Analyzers`
 - `NetArchTest.Rules`
 
-No `#pragma` suppressions allowed.  
+No `#pragma` suppressions allowed.
 All code must conform to `.editorconfig` standards and member ordering.
 
 ---
@@ -105,10 +110,10 @@ Each AI task produces two synchronized outputs:
 ### Markdown Summary
 ```markdown
 ✅ **Sys.Kernel Master Report**
-- Modules Analyzed: 8  
-- Analyzer Warnings: 0  
-- Tests Passed: 42  
-- Confidence: 99 %  
+- Modules Analyzed: 8
+- Analyzer Warnings: 0
+- Tests Passed: 42
+- Confidence: 99 %
 - Status: Analyzer-Clean | Performance Stable | Thread-Safe
 ```
 
@@ -188,18 +193,19 @@ Artifacts stored under `/artifacts/syskernel-analysis.json`.
 
 ## 🧠 Königsweg Philosophy
 
-> “Architecture without discipline collapses under complexity;  
-> analysis without integration breeds noise.  
-> Sys.Kernel unites precision, performance, and principle.”  
+> “Architecture without discipline collapses under complexity;
+> analysis without integration breeds noise.
+> Sys.Kernel unites precision, performance, and principle.”
 > — Josef Hahnl, Syntony Austria
 
 ---
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria* - All rights reserved.
+
+💎 For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
+
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
