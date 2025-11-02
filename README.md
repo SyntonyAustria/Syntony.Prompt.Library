@@ -4,12 +4,12 @@
 <!--- </copyright> --->
 <!--- <author>Hahnl - hahnl</author> --->
 <!--- <email>j.p.hahnl@outlook.com</email> --->
-<!--- <date>02.11.2025 11:31:05</date> --->
+<!--- <date>02.11.2025 11:31:52</date> --->
 <!--- <information solution="Syntony.Prompt.Library" project="Miscellaneous Files" framework="<unknown>" kind="{66A2671D-8FB5-11D2-AA7E-00C04F688DDE}is unknown"> --->
-<!---     <file type=".md" created="02.11.2025 09:44:04" modified="02.11.2025 11:31:05" lastAccess="02.11.2025 11:31:05"> --->
+<!---     <file type=".md" created="02.11.2025 09:44:04" modified="02.11.2025 11:31:52" lastAccess="02.11.2025 11:31:52"> --->
 <!---         D:\Syntony\CommonProperties\Prompts\README.md --->
 <!---     </file> --->
-<!---     <lineStatistics total="178" contentLines="130" blankLines ="48" codeLines="130" codeRatio="73.03 %" allCommentLines="15" commentLines="15" headerLines="15"/> --->
+<!---     <lineStatistics total="177" contentLines="129" blankLines ="48" codeLines="129" codeRatio="72.88 %" allCommentLines="15" commentLines="15" headerLines="15"/> --->
 <!---     <language>MARKDOWN</language> --->
 <!--- </information> --->
 <!--- ***************************************************************************************************************************************************************** --->
@@ -20,7 +20,6 @@
 
 ---
 ![Syntony Framework — Clarity · Strength · Dignity](./Assets/Syntony.png)
-<img src="../Assets/Syntony.png" alt="Syntony Sys.Kernel Framework — Clarity · Strength · Dignity" width="256"  height="256"/>
 
 ---
 
