@@ -129,7 +129,7 @@ Given any C# code file or type:
 
 1. **Documented Source Code:**  
    - All members annotated with XML docs.  
-   - Internal notes with `<devdoc>` tags.  
+   - Internal notes with `<devdoc>` tags and links to external sources.  
    - Clean indentation and formatting per `.editorconfig`.
 
 2. **Documentation Summary Table:**  

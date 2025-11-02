@@ -1,15 +1,34 @@
+<!--- ***************************************************************************************************************************************************************** --->
+<!--- <copyright file="README.md" company="J.P.Hahnl"> --->
+<!---     Copyright © 2017 - 2025 by J.P.Hahnl® / Ing. Josef Hahnl, MBA - j.p.hahnl@outlook.com - All rights reserved. --->
+<!--- </copyright> --->
+<!--- <author>Hahnl - hahnl</author> --->
+<!--- <email>j.p.hahnl@outlook.com</email> --->
+<!--- <date>02.11.2025 11:31:05</date> --->
+<!--- <information solution="Syntony.Prompt.Library" project="Miscellaneous Files" framework="<unknown>" kind="{66A2671D-8FB5-11D2-AA7E-00C04F688DDE}is unknown"> --->
+<!---     <file type=".md" created="02.11.2025 09:44:04" modified="02.11.2025 11:31:05" lastAccess="02.11.2025 11:31:05"> --->
+<!---         D:\Syntony\CommonProperties\Prompts\README.md --->
+<!---     </file> --->
+<!---     <lineStatistics total="178" contentLines="130" blankLines ="48" codeLines="130" codeRatio="73.03 %" allCommentLines="15" commentLines="15" headerLines="15"/> --->
+<!---     <language>MARKDOWN</language> --->
+<!--- </information> --->
+<!--- ***************************************************************************************************************************************************************** --->
 # 🧠 Sys.Kernel Framework
 
-**A Unified Architecture for C# 13 / .NET 9**  
+**A Unified Architecture for C# 13 / .NET 9**
 *Built with Clarity · Strength · Dignity*
+
+---
+![Syntony Framework — Clarity · Strength · Dignity](./Assets/Syntony.png)
+<img src="../Assets/Syntony.png" alt="Syntony Sys.Kernel Framework — Clarity · Strength · Dignity" width="256"  height="256"/>
 
 ---
 
 ## 🌌 Vision
 
-**Sys.Kernel** is not just a framework — it’s a principle.  
-It redefines how .NET systems are structured, verified, and evolved.  
-Every layer, every analyzer, every build step serves one goal:  
+**Sys.Kernel** is not just a framework — it’s a principle.
+It redefines how .NET systems are structured, verified, and evolved.
+Every layer, every analyzer, every build step serves one goal:
 
 > **To bring discipline, determinism, and dignity back to software architecture.**
 
@@ -42,20 +61,20 @@ Sdk → Core → Runtime → Diagnostics → Development
 
 ## ⚙️ Technology Stack
 
-- **Language:** C# 13  
-- **Framework:** .NET 9  
-- **Build System:** MSBuild + deterministic builds  
-- **Testing:** NUnit 4.4  
-- **Code Analysis:**  
-  - `Meziantou.Analyzer`  
-  - `Microsoft.CodeAnalysis.NetAnalyzers`  
-  - `Roslynator.Analyzers`  
-  - `SonarAnalyzer.CSharp`  
-  - `NetArchTest.Rules`  
-  - `AsyncFixer`  
+- **Language:** C# 13
+- **Framework:** .NET 9
+- **Build System:** MSBuild + deterministic builds
+- **Testing:** NUnit 4.4
+- **Code Analysis:**
+  - `Meziantou.Analyzer`
+  - `Microsoft.CodeAnalysis.NetAnalyzers`
+  - `Roslynator.Analyzers`
+  - `SonarAnalyzer.CSharp`
+  - `NetArchTest.Rules`
+  - `AsyncFixer`
   - `PublicApiAnalyzers`
 
-All projects must compile with **0 analyzer warnings**.  
+All projects must compile with **0 analyzer warnings**.
 No `#pragma` suppressions — ever.
 
 ---
@@ -76,7 +95,7 @@ This repository also includes the **Sys.Kernel AI Prompt Library** — a structu
 | [Sys.Kernel.Better.Naming.prompt.md](./Sys.Kernel.Better.Naming.prompt.md)                         | Governs identifier and naming consistency.                      |
 | [Sys.Kernel.Thread.Safety.Concurrency.prompt.md](./Sys.Kernel.Thread.Safety.Concurrency.prompt.md) | Ensures concurrency correctness and lock-free safety.           |
 
-A complete overview is available in the  
+A complete overview is available in the
 📖 [Sys.Kerne.Prompt.Library.Index.prompt.md](./Sys.Kerne.Prompt.Library.Index.prompt.md)
 
 ---
@@ -105,31 +124,31 @@ jobs:
 
 ## 🧠 Design Principles
 
-1. **Analyzer-Clean by Design**  
-   Every commit is a promise of quality.  
+1. **Analyzer-Clean by Design**
+   Every commit is a promise of quality.
    Warnings are signals of broken clarity.
 
-2. **Self-Describing Architecture**  
+2. **Self-Describing Architecture**
    Build metadata and SDK generation ensure transparency between the developer, build system, and runtime.
 
-3. **Runtime Minimalism**  
+3. **Runtime Minimalism**
    Each layer serves one purpose — no reflection magic, no hidden coupling.
 
-4. **Deterministic Builds**  
+4. **Deterministic Builds**
    Every artifact can be reproduced exactly, ensuring consistency across environments.
 
-5. **The Königsweg**  
-   
-   - **Clarity** → Know what your code means.  
-   - **Strength** → Make it resilient, measurable, and testable.  
+5. **The Königsweg**
+
+   - **Clarity** → Know what your code means.
+   - **Strength** → Make it resilient, measurable, and testable.
    - **Würde (Dignity)** → Build with intention and respect for complexity.
 
 ---
 
 ## 🧭 Philosophy
 
-> “A framework should not just run — it should *reveal* its structure.  
->  Sys.Kernel is a living mirror of the system that builds it.”  
+> “A framework should not just run — it should *reveal* its structure.
+>  Sys.Kernel is a living mirror of the system that builds it.”
 >  — *Josef Hahnl, Syntony Austria*
 
 ---
@@ -140,7 +159,7 @@ Sys.Kernel maintains a **shared glossary** that defines its core terms, principl
 
 📘 See [Sys.Kernel.Glossary.prompt.md](./Sys.Kernel.Glossary.prompt.md)
 
-It ensures linguistic and philosophical coherence across prompts, analyzers, and documentation —  
+It ensures linguistic and philosophical coherence across prompts, analyzers, and documentation —
 bridging AI semantics and human clarity.
 
 > *“Meaning precedes precision.”* — *Sys.Kernel Design Philosophy*
@@ -149,9 +168,9 @@ bridging AI semantics and human clarity.
 
 ## 📜 License - Copyright
 
-© 2025 Josef Hahnl — *Syntony Austria*  
-All rights reserved.  
-For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)  
+© 2025 Josef Hahnl — *Syntony Austria*
+All rights reserved.
+For details, visit [https://syntonyblog.wordpress.com/](https://syntonyblog.wordpress.com/)
 📧 Contact: [SyntonyAustria@outlook.com](mailto:SyntonyAustria@outlook.com)
 
 ***Clarity · Strength · Dignity — life.exe - Syntony - #syntony - #LifeDotExe***
