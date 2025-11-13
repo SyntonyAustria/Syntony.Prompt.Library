@@ -22,9 +22,9 @@ tools: [workspace, analyzers, copilotPromptTools]
 | **Classes / Structs / Records** | `PascalCase`                             | ✅ `MessageTemplateParser`<br>❌ `message_template_parser` |
 | **Interfaces**                  | Prefix with `I`, `PascalCase`            | ✅ `ILoggerFactory`<br>❌ `logger_factory`                 |
 | **Methods**                     | `PascalCase`                             | ✅ `CreateLogger()`<br>❌ `create_logger()`                |
-| **Async Methods**               | Must end with `Async`                    | ✅ `LoadConfigurationAsync()`<br>❌ `LoadConfiguration()`  |
-| **Parameters**                  | `camelCase`                              | ✅ `void Log(string message)`                             |
-| **Fields (private/protected)**  | `_camelCase`                             | ✅ `_options`<br>❌ `options`                              |
+| **Async Methods**               | Must end with `Async`                    | ✅ `LoadConfigurationAsync()`<br>❌ `LoadConfiguration()`|
+| **Parameters**                  | `camelCase`                              | ✅ `void Log(string message)`                            |
+| **Fields (private/protected)**  | `_camelCase`                             | ✅ `_options`<br>❌ `options`                             |
 | **Constants**                   | `PascalCase`                             | ✅ `DefaultTimeout`                                       |
 | **Type Parameters**             | Prefix with `T`                          | ✅ `TValue`, `TResult`                                    |
 | **Namespaces**                  | `PascalCase`, follow folder structure    | ✅ `Syntony.Sys.Kernel.Diagnostics`                       |
